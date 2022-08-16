@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.logo {
+  margin-top: 90px;
+  max-width: 500px;
+  max-height: 200px;
+  margin-bottom: 60px;
+}
+#title {
+  color: #fff;
+  font-family: "Bebas Neue";
+  font-weight: 600;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.countdown {
+  font-family: "Bebas Neue";
+  display: flex;
+  color: #fff;
+  text-align: center;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+.time h1 {
+  font-size: 60px;
+}
+.sound-button {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000;
+  box-shadow: 0 5px #f6b91b;
+  outline: none;
+  margin-bottom: 100px;
+}
+.sound-button:hover {
+  opacity: 0.7;
+}
+.sound-button:active {
+  box-shadow: 0 2px #f6b91b;
+}
+.sound-button:focus {
+  outline: none;
+}
+.divv {
+  min-width: 100px;
+  min-height: 200px;
+  background-color: #fff;
+}
+@media (max-width: 576px) {
+  .logo {
+    max-width: 300px;
+    margin-bottom: 80px;
+  }
+  #title {
+    font-size: 30px;
+    max-width: 320px;
+  }
+  .countdown {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .time {
+    margin: 3px;
+    font-size: 36px;
+  }
+  .time h1 {
+    font-size: 36px;
+  }
+  .sound-button {
+    padding: 5px 25px;
+  }
+
+  .trailer {
+    width: 350px;
+    height: 250px;
+  }
+  .row {
+    display: block !important ;
+  }
+  .col {
+    max-width: 300px;
+  }
+  @media (max-height: 850px) {
+    #video-background {
+      height: 130vh;
+    }
+  }
+}
+@media (max-width: 920px) {
+  .trailer {
+    width: 380px;
+    height: 250px;
+  }
+}
+@media (max-width: 420px) {
+  .trailer {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media (max-width: 290px) {
+  #title {
+    max-width: 230px;
+  }
+  .logo {
+    max-width: 250px;
+  }
+  .trailer {
+    width: 250px;
+    height: 200px;
+  }
+}
+@media (max-width: 770px) {
+  .row {
+    display: block !important;
+  }
+}
+.trailers {
+  margin-bottom: 50px;
+}
