@@ -22,3 +22,37 @@ function updateTime() {
   seconds.innerHTML = s < 10 ? "0" + s : s;
 }
 setInterval(updateTime, 1000);
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  freeMode: true,
+  autoplay: {
+    delay: 3300,
+    disableOnInteraction: false,
+  },
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    270: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    430: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});

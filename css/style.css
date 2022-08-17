@@ -11,6 +11,13 @@ img {
   width: 100%;
   height: auto;
 }
+.swiper {
+  display: flex;
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 #video-background {
   position: fixed;
   top: 0;
@@ -110,6 +117,13 @@ img {
   .col {
     max-width: 300px;
   }
+  .swiper {
+    width: 500px;
+  }
+  .swiper img {
+    width: 300px;
+    height: 200px;
+  }
   @media (max-height: 850px) {
     #video-background {
       height: 130vh;
@@ -121,11 +135,28 @@ img {
     width: 380px;
     height: 250px;
   }
+  .swiper {
+    width: 800px;
+  }
+  .swiper img {
+    width: 300px;
+    height: 170px;
+  }
 }
 @media (max-width: 420px) {
   .trailer {
     width: 300px;
     height: 200px;
+  }
+  .swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+  }
+  .swiper img {
+    width: 350px;
+    height: 170px;
   }
 }
 @media (max-width: 290px) {
@@ -139,6 +170,13 @@ img {
     width: 250px;
     height: 200px;
   }
+  .swiper {
+    width: 250px;
+  }
+  .swiper img {
+    width: 240px;
+    height: 170px;
+  }
 }
 @media (max-width: 770px) {
   .row {
@@ -146,5 +184,78 @@ img {
   }
 }
 .trailers {
+  margin-bottom: 120px;
+}
+.cards-container {
+  display: flex;
   margin-bottom: 50px;
+}
+.image-overlay {
+  position: relative;
+}
+
+.cards-container img {
+  max-width: 250px;
+  height: 380px;
+  max-height: 500px;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  transform: perspective(800px) rotateY(25deg);
+  transition: 0.5s;
+}
+.flags {
+  height: 100px;
+}
+
+.cards-container .image-overlay:hover img {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 0.3;
+}
+.cards-container .image-overlay:hover p {
+  transition: 0.8s;
+  opacity: 1;
+}
+.text {
+  position: absolute;
+  color: #fff;
+  top: 10px;
+  left: 10px;
+  font-family: "Bebas Neue";
+  bottom: 0;
+  font-size: 32px;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  opacity: 0;
+  text-align: center;
+  top: 40%;
+}
+.text-down {
+  position: absolute;
+  color: #fff;
+  top: 10px;
+  left: 10px;
+  font-family: "Bebas Neue";
+  bottom: 0;
+  font-size: 18px;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  opacity: 0;
+  text-align: center;
+  top: 52%;
+}
+.division-title {
+  color: #fff;
+  font-size: 38px;
+  font-family: "Bebas Neue";
+  text-align: center;
+}
+.division-subtitle {
+  color: #fff;
+  font-size: 28px;
+  font-family: "Bebas Neue";
+  text-align: center;
+  margin-bottom: 20px;
 }
