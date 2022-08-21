@@ -1,6 +1,19 @@
+const soundBtn = document.querySelector(".sound-button");
+let isPlayed = false;
+var audio = new Audio("audio/song.mp3");
+
+soundBtn.addEventListener("click", playAudio);
 function playAudio() {
-  var audio = new Audio("audio/song.mp3");
+  if (isPlayed) {
+    audio.pause();
+    soundBtn.innerText = "Ow Ow";
+
+    return (isPlayed = false);
+  }
+  isPlayed = true;
+
   audio.play();
+  soundBtn.innerText = "Stop";
 }
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");
